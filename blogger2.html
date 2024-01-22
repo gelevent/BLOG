@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Info Cards with Hover Effects</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+
+</head>
+
+<style>
+    /*Info cards styling*/
+
+    body {
+        background-color: #000000;
+        font-family: helvetica;
+    }
+
+    .content {
+        width: 100%;
+        padding-top: 170px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #000;
+    }
+
+    @media screen and (max-width: 767px) {
+        .content {
+            padding-top: 80px;
+            flex-direction: column;
+        }
+    }
+
+    .card {
+        width: 300px;
+        height: 280px;
+        background-color: #fff;
+        margin: 15px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.24);
+        cursor: pointer;
+        border: 0;
+        transition: all 0.3s ease;
+        background: linear-gradient(45deg, rgba(255, 255, 255, 1) 80%, rgba(35, 72, 255, 1) 82%);
+        background-size: 450px;
+    }
+
+    .icon {
+        margin: 0 auto;
+        width: 100%;
+        height: 80px;
+        max-width: 80px;
+        background: linear-gradient(90deg, rgba(126, 148, 255, 1) 41%, rgba(0, 0, 0, 1) 53%);
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        transition: all 0.8s ease;
+        background-size: 200px;
+    }
+
+    .card .title {
+        margin: 0;
+        text-align: center;
+        margin-top: 30px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+    }
+
+    .card .text {
+        width: 80%;
+        margin: 0 auto;
+        font-size: 13px;
+        text-align: center;
+        margin-top: 20px;
+        letter-spacing: 2px;
+        opacity: 0;
+        transition: all 0.4s ease-in-out;
+    }
+
+    .card:hover {
+        height: 300px;
+        background-position: -80px;
+    }
+
+    .card:hover .info {
+        height: 90%;
+    }
+
+    .card:hover .text {
+        opacity: 1;
+        max-height: 40px;
+    }
+
+    .card:hover .icon {
+        background-position: -100px;
+        color: #2348ff;
+    }
+</style>
+
+<body>
+    <div class="content">
+
+        <div class="card">
+            <i class="fas fa-user-circle icon fa-2x"></i>
+            <p class="title">Palestine</p>
+            <a href="https://id.wikipedia.org/wiki/Palestina" class="btn">Click to Read</a>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-bookmark icon fa-2x"></i>
+            <p class="title">Ukraina</p>
+            <a href="https://id.wikipedia.org/wiki/Ukraina" class="btn" tabindex="-1" role="button" aria-disabled="true">Click to Read</a>
+
+        </div>
+
+        <div class="card">
+            <i class="fas fa-address-card icon fa-2x"></i>
+            <p class="title">Rohingya</p>
+            <a href="https://id.wikipedia.org/wiki/Suku_Rohingya" class="btn" tabindex="-1" role="button" aria-disabled="true">Click to Read</a>
+
+        </div>
+        <div class="card">
+            <i class="fas fa-address-card icon fa-2x"></i>
+            <p class="title">China</p>
+            <a href="https://id.wikipedia.org/wiki/Tiongkok" class="btn" tabindex="-1" role="button" aria-disabled="true">Click to Read</a>
+
+        </div>
+
+    </div>
+
+
+    </div>
+</body>
+
+</html>

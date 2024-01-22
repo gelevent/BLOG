@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "palestina",
+        "src": "asset/img/flag-palestine.jpg",
+        "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, delectus."
+    },
+    {
+        "id": 2,
+        "name": "ukraina",
+        "src": "asset/img/sl_032922_49370_44.jpg",
+        "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, delectus."
+    },
+    {
+        "id": 3,
+        "name": "rohingya",
+        "src": "asset/img/84813fe0-936f-11ee-8811-bb0b98b42f80.jpg",
+        "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, delectus."
+    },
+    {
+        "id": 4,
+        "name": "serangan cyber bi",
+        "src": "asset/img/c7497f38-96f1-4782-95bb-e9ac05a8c8b5_169.jpeg",
+        "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, delectus."
+    },
+    {
+        "id": 5,
+        "name": "bitcoin halving 2024",
+        "src": "asset/img/bitcoin-computer-graphic-card.jpg",
+        "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, delectus."
+    },
+    {
+        "id": 6,
+        "name": "pemilu 2024",
+        "src": "asset/img/person-placing-its-vote-box.jpg",
+        "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, delectus."
+    }
+]

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Card Searching in Bootstrap & JS</title>
+
+</head>
+
+
+<body style="background: linear-gradient(to right, #24243e, #302b63);">
+<nav></nav>
+    <h2 class="text-center mt-2 text-light">Product Searching </h2>
+
+    <input type="text" class="form-control  mt-3  mx-auto" id="myinput" placeholder="Live searching...."
+        style="width:30%;">
+
+
+    <div class="container mb-5">
+        <h3 class="text-light mt-5 text-center" id="para" style="display: none;">Not Found </h3>
+
+        <div class="row mt-3" id="card">
+
+        </div>
+
+    </div>
+
+
+<script src="asset/js/trending.js"></script>
+    <script>
+        // filter array 
+        let filterarray = [];
+
+        // gallery card array
+
+        let galleryarray = [
+            {
+                id: 1,
+                name: "palestina",
+                src: "asset/img/flag-palestine.jpg",
+                desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, delectus."
+            },
+            {
+                id: 2,
+                name: "ukraina",
+                src: "asset/img/sl_032922_49370_44.jpg",
+                desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, delectus."
+            },
+            {
+                id: 3,
+                name: "rohingya",
+                src: "asset/img/84813fe0-936f-11ee-8811-bb0b98b42f80.jpg",
+                desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, delectus."
+            },
+            {
+                id: 4,
+                name: "serangan cyber bi",
+                src: "asset/img/c7497f38-96f1-4782-95bb-e9ac05a8c8b5_169.jpeg",
+                desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, delectus."
+            },
+            {
+                id: 5,
+                name: "bitcoin halving 2024",
+                src: "asset/img/bitcoin-computer-graphic-card.jpg",
+                desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, delectus."
+            },
+            {
+                id: 6,
+                name: "pemilu 2024",
+                src: "asset/img/person-placing-its-vote-box.jpg",
+                desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, delectus."
+            }
+        ]
+
+
+
+        showgallery(galleryarray);
+
+
+        // create function to show card
+
+
+        function showgallery(curarra) {
+            const card = document.getElementById("card"); 
+            card.innerText = ""
+            for (var i = 0; i < curarra.length; i++) {
+                document.getElementById("card").innerHTML += `
+                    
+                <div class="col-md-4 mt-3 py-3 ">
+                    <img src="${curarra[i].src}" width="100%" height="220px" class="rounded"/>
+           <div class="card p-3 ps-5 pe-5 text-dark" style="background-color:white" >
+               <h4 class="text-capitalize ">${curarra[i].name}</h4>
+
+          <p class="mt-2">${curarra[i].desc}</p>
+          <button class="btn btn-dark w-100 mx-auto">More</button>
+       
+          </div>
+          </div>
+       `
+            }
+
+        }
+
+        // For Live Searching Product
+
+        document.getElementById("myinput").addEventListener("keyup", function () {
+            let text = document.getElementById("myinput").value;
+
+            filterarray = galleryarray.filter(function (a) {
+                if (a.name.includes(text)) {
+                    return a.name;
+                }
+
+            });
+            if (this.value == "") {
+                showgallery(galleryarray);
+            }
+            else {
+                if (filterarray == "") {
+                    document.getElementById("para").style.display = 'block'
+                    document.getElementById("card").innerHTML = "";
+                }
+                else {
+
+                    showgallery(filterarray);
+                    document.getElementById("para").style.display = 'none'
+                }
+            }
+
+        });
+
+
+
+    </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
